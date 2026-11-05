@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1e3a5f
+    );
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 45px;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.login-card h1 {
+  margin-top: 0;
+  font-size: 38px;
+}
+
+.login-card p {
+  margin-bottom: 30px;
+  color: #6b7280;
+}
+
+.topbar {
+  min-height: 100px;
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: #111827;
+  color: white;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 7px 0 0;
+  color: #cbd5e1;
+}
+
+.session {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.role-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #2563eb;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dashboard {
+  width: min(1150px, calc(100% - 40px));
+  margin: 35px auto;
+  display: grid;
+  gap: 25px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.section-description {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #64748b;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: white;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.actions {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+}
+
+.table-wrapper {
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: #f8fafc;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e0e7ff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.state-form {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 15px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.catalog-box {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.catalog-box h3 {
+  margin-top: 0;
+}
+
+.catalog-box .btn {
+  margin-top: 12px;
+}
+
+.catalog-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.catalog-item {
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+@media (max-width: 750px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .session {
+    justify-content: flex-start;
+  }
+
+  .form-grid,
+  .admin-grid,
+  .catalog-list,
+  .state-form {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    width: min(100% - 20px, 1150px);
+    margin: 20px auto;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
